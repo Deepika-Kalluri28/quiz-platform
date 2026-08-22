@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizly | Learn, play, climb</title>
+    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" />
+</head>
+<body>
+    <main class="app-shell">
+    <section class="login-container" aria-labelledby="login-title">
+        <div class="brand-row"><span class="brand-mark">Q</span><span class="brand-name">quizly</span></div>
+        <div class="welcome-copy login-copy"><p class="eyebrow">WELCOME TO QUIZLY</p><h1 id="login-title" class="config-title">Your next<br><em>big score</em> starts here.</h1><p class="config-subtitle">Create your player profile to join the leaderboard.</p></div>
+        <form class="login-form">
+            <label for="player-name">Your name</label>
+            <input id="player-name" name="playerName" type="text" placeholder="e.g. Alex Morgan" autocomplete="name" required>
+            <label for="player-email">Email address</label>
+            <input id="player-email" name="playerEmail" type="email" placeholder="alex@example.com" autocomplete="email" required>
+            <button class="login-button" type="submit">Continue <span class="material-symbols-outlined">arrow_forward</span></button>
+        </form>
+    </section>
+    <!-- configuration container -->
+    <div class="config-container">
+        <div class="brand-row"><span class="brand-mark">Q</span><span class="brand-name">quizly</span><span class="streak-pill">🔥 4 day streak</span></div>
+        <div class="welcome-copy"><p class="eyebrow">READY, SET, THINK</p><h1 class="config-title">Make your brain<br><em>the main character.</em></h1><p class="config-subtitle">Pick a challenge and earn your place on the board.</p></div>
+        <div class="config-option">
+            <h4 class="option-title">Choose a category</h4>
+            <div class="category-options">
+                <button class="category-option active" data-category="easy">Web basics</button>
+                <button class="category-option" data-category="moderate">CSS &amp; JavaScript</button>
+                <button class="category-option" data-category="difficult">Advanced web</button>
+                <button class="category-option" data-category="harder">Expert mode</button>
+            </div>
+        </div>
+        <div class="config-option difficulty-option">
+            <h4 class="option-title">Choose your level</h4>
+            <div class="level-options">
+                <button class="level-options active ">Easy</button>
+                <button class="level-options">Medium</button>
+                <button class="level-options">Hard</button>
+                <button class="level-options">Expert</button>
+            </div>
+        </div>
+        <div class="config-option question-count-option">
+            <h4 class="option-title">Number of Questions</h4>
+            <div class="question-options">
+                <button class="question-options">5</button>
+                 <button class="question-options">10</button>
+                  <button class="question-options active">15</button>
+                   <button class="question-options">20</button>
+                
+            </div>
+        </div>
+        <button class="start-quiz-button">Start quiz <span class="material-symbols-outlined">arrow_forward</span></button>
+    </div>
+<!-- quiz container -->
+ <div class="quiz-container">
+    <header class="quiz-header">
+    <button class="icon-button quit-quiz" aria-label="Exit quiz"><span class="material-symbols-outlined">close</span></button>
+    <div class="progress-wrap"><p class="quiz-kicker">QUESTION <span class="current-question-number">1</span></p><div class="progress-track"><span class="progress-bar"></span></div></div>
+<div class="quiz-timer">
+<span class="material-symbols-outlined">
+timer
+</span>
+<p class="time-duration">15s</p>
+
+</div>
+</header>
+<div class="quiz-content">
+    <h1 class="question-text">What does HTML stand for?</h1>
+    <ul class="answer-options">
+        <li class="answer-option incorrect">Hyper Text preprocessor
+            <span class="material-symbols-outlined">
+x_circle
+</span>
+        </li>
+        <li class="answer-option correct"> Hyper Text Markup Language
+            <span class="material-symbols-outlined">
+check_circle
+</span>
+        </li>
+        <li class="answer-option">Hyper Text Multiple Language</li>
+        <li class="answer-option">Hyper Tool Multi language</li>
+    </ul>
+</div>
+<div class="quiz-footer">
+    <p class="question-status"><b>1</b> of <b>5</b> questions</p>
+    <button class="next-question-btn">Next question
+<span class="material-symbols-outlined">
+arrow_right_alt
+</span>
+    </button>
+</div>
+ </div>
+<!-- quiz result -->
+ <div class="result-container">
+     <div class="result-badge"><span class="material-symbols-outlined">emoji_events</span></div>
+     <p class="eyebrow">QUIZ COMPLETE</p>
+     <h2 class="result-title">That was <em>brilliant.</em></h2>
+     <p class="result-message">You answered <b>3</b> out of <b>5</b> questions correctly.</p>
+     <div class="score-summary"><strong class="score-value">3</strong><span>/ 5<br><small>your score</small></span></div>
+    <section class="leaderboard" aria-labelledby="leaderboard-title"><div class="section-heading"><h3 id="leaderboard-title">Go to leaderboard</h3></div></section>
+     <button class="try-again-btn">Play again <span class="material-symbols-outlined">replay</span></button>
+ </div>
+ </main>
+     <script src="javascript/questions.js"></script>
+     <script src="javascript/script.js"></script>
+</body>
+</html>
